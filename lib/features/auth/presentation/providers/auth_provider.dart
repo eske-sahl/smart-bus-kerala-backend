@@ -91,4 +91,22 @@ class AuthProvider extends ChangeNotifier {
       notifyListeners();
     }
   }
+
+
+  Future<void> logout() async {
+    _isLoading = true;
+    _errorMessage = null;
+    notifyListeners();
+
+    try {
+      await repository.signOut();
+      _currentUser = null;
+    } catch (e) {
+      _errorMessage = e.toString();
+    } finally {
+      _isLoading = false;
+      notifyListeners();
+    }
+  }
+
 }

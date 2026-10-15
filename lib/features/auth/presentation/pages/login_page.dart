@@ -83,6 +83,27 @@ class _LoginPageState extends State<LoginPage> {
                  child: const Text('Login')
               ),
             ),
+
+            const SizedBox(height: 15),
+            ElevatedButton(
+              onPressed: () async {
+                final authProvider = context.read<AuthProvider>();
+
+                await authProvider.logout();
+
+                if (!context.mounted) return;
+
+                final message = authProvider.errorMessage == null
+                    ? 'Logout Successful'
+                    : 'Logout Failed: ${authProvider.errorMessage}';
+
+                ScaffoldMessenger.of(context).showSnackBar(
+                  SnackBar(content: Text(message)),
+                );
+              },
+              child: const Text('Test Logout'),
+            ),
+
           ],
         ),
       ),
