@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "114822980751",
+    "project_id": "smartbus-kerala",
+    "storage_bucket": "smartbus-kerala.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:114822980751:android:f6419cb5895bc6ee6afcfa",
+        "android_client_info": {
+          "package_name": "com.example.bus_service_app"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBaka89CrdQqtW_8f3UFU4uguWL9SlpnxY"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
